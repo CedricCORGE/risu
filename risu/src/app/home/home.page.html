@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <h1>Configurateur</h1>
+  <ion-img src="assets/logo_noir.png"></ion-img>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true">
+  
+  <div class="text-container">
+    
+    <div class="title">
+      <h3>Informations personnelles:</h3>
+    </div>
+    
+    <div class="input-container">
+      <ion-input placeholder="Nom de la ville"></ion-input>
+      <ion-input placeholder="Nom de la plage"></ion-input>
+    </div>
+    
+    <div class="button-container">
+      <ion-button id="container">
+        <ion-label>Conteneurs alentours</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <ion-button id="next">
+        <ion-label>Suivant</ion-label>
+      </ion-button>
+    </div>
+
   </div>
+
+
 </ion-content>
+
+<ion-footer>
+  
+  <div class="container">
+    <div class="left-palmier">
+      <ion-img id="palmier" src="assets/palmier.png"></ion-img>
+    </div>
+
+    <div class="right-palmier">
+      <ion-img id="palmier" src="assets/palmier.png"></ion-img>
+    </div>
+  </div>
+
+</ion-footer>
