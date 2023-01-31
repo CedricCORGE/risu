@@ -1,11 +1,35 @@
 <ion-content>
 
-  <app-header></app-header>
+  <div style="overflow: hidden; height: 100%;">
 
-  <div class="container">
-    <app-shopping-info></app-shopping-info>
+    <app-header></app-header>
+
+    <div class="container">
+      <div class="left-container">
+        <ion-button>Conteneurs alentours<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+        <ion-button (click)="openKit()">
+          Kits
+          <ion-icon *ngIf="kit_open == false" name="chevron-forward-outline"></ion-icon>
+          <ion-icon *ngIf="kit_open == true" name="chevron-down-outline"></ion-icon>
+        </ion-button>
+        <div *ngIf="kit_open == true">
+          <p>les différents kits</p>
+        </div>
+      </div>
+
+      <div class="middle-container">
+        <img src="assets/batz-logo.png">
+      </div>
+
+      <app-shopping-info></app-shopping-info>
+
+      <ion-button id="previous" [routerLink]="['/home']">Précédent</ion-button>
+      <ion-button id="next" [routerLink]="['/shopping']">Suivant</ion-button>
+
+    </div>
+
+    <app-footer></app-footer>
+
   </div>
-
-  <app-footer></app-footer>
 
 </ion-content>

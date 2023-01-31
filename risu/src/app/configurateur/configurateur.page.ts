@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigurateurPage implements OnInit {
 
+  kit_open = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  openKit() {
+    this.kit_open = !this.kit_open;
+  }
 }

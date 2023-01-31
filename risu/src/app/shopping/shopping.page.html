@@ -1,27 +1,29 @@
 
-<ion-content style="height: 100%;">
+<ion-content>
 
-  <app-header></app-header>
+  <div style="overflow: hidden; height: 100%;">
 
-  <div class="container">
-    <div class="card-info">
-      <ion-input placeholder="Numéro de carte"></ion-input>
-      <div class="sub-card-info">
-        <ion-input placeholder="Date d'expiration"></ion-input>
-        <ion-input placeholder="CVC"></ion-input>
+    <app-header></app-header>
+
+    <div class="container">
+      <div class="card-info">
+        <ion-input placeholder="Numéro de carte"></ion-input>
+        <div class="sub-card-info">
+          <ion-input placeholder="Date d'expiration"></ion-input>
+          <ion-input placeholder="CVC"></ion-input>
+        </div>
+        <ion-input placeholder="Nom du propriétaire"></ion-input>
       </div>
-      <ion-input placeholder="Nom du propriétaire"></ion-input>
-    </div>
+
+      <app-shopping-info></app-shopping-info>
+
+      <div class="button" [routerLink]="['/home']">
+        <ion-button>Terminer</ion-button>
+      </div>
     
-    <app-shopping-info></app-shopping-info>
-
-    <div class="button">
-      <ion-button>Terminer</ion-button>
     </div>
-  
+
+    <app-footer></app-footer>
   </div>
-
-
-  <app-footer></app-footer>
 
 </ion-content>
