@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'configurateur',
     pathMatch: 'full'
+  },
+  {
+    path: 'shopping',
+    loadChildren: () => import('./shopping/shopping.module').then( m => m.ShoppingPageModule)
+  },
+  {
+    path: 'configurateur',
+    loadChildren: () => import('./configurateur/configurateur.module').then( m => m.ConfigurateurPageModule)
   },
 ];
 
